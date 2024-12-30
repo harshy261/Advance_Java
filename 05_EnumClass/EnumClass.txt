@@ -1,0 +1,67 @@
+Explanation of Enum Class in Java
+In layman terms, an enum class in Java is a special type of class that represents a group of constants, but with added functionality. Unlike regular enums, which are just a list of constants, an enum class can have fields, methods, and constructors. This allows you to associate additional data and behavior with each constant.
+
+Key Points
+Enum Declaration: Use the enum keyword to declare an enum class.
+Fields and Methods: Enum classes can have fields and methods, just like regular classes.
+Constructors: Enum classes can have constructors to initialize the fields for each constant.
+Usage: Enum classes are useful when you need to associate additional data or behavior with each constant.
+
+
+
+Interview Questions and Answers
+What is an enum class in Java?
+
+Answer: An enum class in Java is a special type of class that represents a group of constants with added functionality. It can have fields, methods, and constructors, allowing you to associate additional data and behavior with each constant.
+How do you declare an enum class in Java?
+
+Answer: An enum class is declared using the enum keyword. For example:
+enum Laptop {
+    Macbook, XPS, Surface, ThinkPad;
+}
+
+
+
+
+Can an enum class have fields and methods?
+
+Answer: Yes, an enum class can have fields and methods, just like a regular class. This allows you to associate additional data and behavior with each constant.
+Can an enum class have a constructor?
+
+Answer: Yes, an enum class can have a constructor. The constructor is used to initialize the fields for each constant. Enum constructors are always private or package-private.
+Provide an example of an enum class with fields and methods.
+
+Answer:
+enum Laptop {
+    Macbook(2000), XPS(1800), Surface(1500), ThinkPad(1200);
+
+    private int price;
+
+    // Constructor
+    Laptop(int price) {
+        this.price = price;
+    }
+
+    // Getter method
+    public int getPrice() {
+        return price;
+    }
+}
+
+
+How do you iterate over all constants of an enum class?
+
+Answer: You can use the values() method to get an array of all constants and iterate over them using a for-each loop. For example:
+for (Laptop lap : Laptop.values()) {
+    System.out.println(lap + " : " + lap.getPrice());
+}
+
+
+Can you override methods in an enum class?
+
+Answer: Yes, you can override methods in an enum class. Each enum constant can have its own implementation of a method.
+What is the purpose of the name() method in an enum class?
+
+Answer: The name() method returns the name of the enum constant as a string. It is useful for getting the string representation of the constant.
+
+
