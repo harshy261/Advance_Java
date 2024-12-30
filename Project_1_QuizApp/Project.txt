@@ -1,0 +1,55 @@
+                    #####################################################################
+                    
+                                            EXPLANATION
+                    
+                    #####################################################################
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Overview : 
+
+This project is a simple Quiz console application written in Java. It allows users to answer multiple-choice questions and calculates their score based on their answers.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Project Structure :
+
+The project consists of the following files:
+Main.java: The entry point of the application.
+Question.java: A class representing a quiz question.
+QuestionService.java: A class that manages the quiz questions and handles user interaction.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Main.java :
+This file contains the Main class with the main method, which is the entry point of the application.
+
+Explanation :
+The main method creates an instance of QuestionService.
+It calls the playQuiz method to start the quiz.
+After the quiz is completed, it calls the printScore method to display the user's score.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Question.java :
+This file contains the Question class, which represents a quiz question.
+
+Explanation :
+The Question class has fields for the question ID, question text, four options, and the correct answer.
+It has a constructor to initialize these fields.
+Getters and setters are provided for each field to allow access and modification.
+The toString method is overridden to provide a string representation of the question.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+QuestionService.java :
+This file contains the QuestionService class, which manages the quiz questions and handles user interaction.
+
+Explanation :
+The QuestionService class has an array of Question objects and an array to store user selections.
+The constructor initializes the questions array with predefined questions.
+The playQuiz method displays each question and its options, and records the user's answer.
+The printScore method compares the user's answers with the correct answers and calculates the score.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

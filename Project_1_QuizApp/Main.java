@@ -6,3 +6,4 @@ public class Main {
         questionService.printScore();
     }
 }
+
