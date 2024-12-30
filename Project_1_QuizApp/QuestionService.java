@@ -32,9 +32,13 @@ public class QuestionService {
         
         System.out.println();
         System.out.println("Your answers are : ");
-        for (String s : selection) 
+        // for (String s : selection) 
+        // {
+        //     System.out.println("Answer -> " + s);
+        // }
+        for (int j=0; j<selection.length; j++) 
         {
-            System.out.println(s);
+            System.out.println("Answer " + j + " -> " + selection[j]);
         }
 
     }
