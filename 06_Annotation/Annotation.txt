@@ -1,0 +1,77 @@
+Explanation of Annotations in Java
+In layman terms, annotations in Java are like special labels or markers that you can add to your code. These labels provide metadata about the code, which can be used by the compiler, development tools, or at runtime. Annotations do not change the actual behavior of the code but can be used to give additional information or instructions.
+
+Key Points
+Annotation Declaration: Annotations are declared using the @ symbol followed by the annotation name.
+Built-in Annotations: Java provides several built-in annotations, such as @Override, @Deprecated, and @SuppressWarnings.
+Custom Annotations: You can create your own custom annotations.
+Retention Policies: Annotations can have different retention policies, such as SOURCE, CLASS, and RUNTIME, which determine how long the annotation is retained.
+
+
+
+
+Interview Questions and Answers
+What is an annotation in Java?
+
+Answer: An annotation in Java is a form of metadata that provides information about the code. Annotations do not change the actual behavior of the code but can be used by the compiler, development tools, or at runtime to give additional information or instructions.
+What are some built-in annotations in Java?
+
+Answer: Some built-in annotations in Java include:
+@Override: Indicates that a method is intended to override a method in a superclass.
+@Deprecated: Marks a method, class, or field as deprecated, meaning it should no longer be used.
+@SuppressWarnings: Instructs the compiler to suppress specific warnings.
+How do you create a custom annotation in Java?
+
+Answer: You can create a custom annotation using the @interface keyword. For example:
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface MyCustomAnnotation {
+    String value();
+}
+
+
+
+What is the purpose of the @Override annotation?
+
+Answer: The @Override annotation is used to indicate that a method is intended to override a method in a superclass. It helps the compiler catch errors if the method does not actually override a method in the superclass.
+What are retention policies in annotations?
+
+Answer: Retention policies determine how long an annotation is retained. The three retention policies are:
+SOURCE: The annotation is retained only in the source code and is discarded during compilation.
+CLASS: The annotation is retained in the compiled class files but is not available at runtime.
+RUNTIME: The annotation is retained in the compiled class files and is available at runtime.
+Can annotations have parameters?
+
+Answer: Yes, annotations can have parameters, which are called elements. For example:
+public @interface MyAnnotation {
+    String value();
+    int number() default 0;
+}
+
+
+
+How do you access annotation values at runtime?
+
+Answer: You can access annotation values at runtime using reflection. For example:
+import java.lang.reflect.Method;
+
+public class Main {
+    @MyCustomAnnotation(value = "Hello")
+    public void myMethod() {}
+
+    public static void main(String[] args) throws Exception {
+        Method method = Main.class.getMethod("myMethod");
+        MyCustomAnnotation annotation = method.getAnnotation(MyCustomAnnotation.class);
+        System.out.println(annotation.value()); // Output: Hello
+    }
+}
+
+
+What is the @Deprecated annotation used for?
+
+Answer: The @Deprecated annotation is used to mark a method, class, or field as deprecated, meaning it should no longer be used. It serves as a warning to developers that the annotated element may be removed in future versions.
