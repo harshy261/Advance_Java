@@ -1,0 +1,107 @@
+Types of Interface:-
+1. Normal interface
+	- an interface having two or more methods
+2. Functional interface (SAM)
+	- SAM => Single Abstract Method interface
+3. Marker interface
+	- an interface that as no methods (blank interface)
+
+
+
+
+Explanation of Interface Types in Java
+In layman terms, interfaces in Java are like contracts that define a set of methods that a class must implement. There are different types of interfaces based on their structure and purpose. Here are the main types:
+
+Normal Interface: An interface that has two or more methods. It is the most common type of interface.
+Functional Interface (SAM): A functional interface has exactly one abstract method. SAM stands for Single Abstract Method. These interfaces are used primarily for lambda expressions and method references.
+Marker Interface: A marker interface does not have any methods. It is used to mark a class with a specific property or behavior.
+
+
+Normal Interface :
+interface Animal {
+    void eat();
+    void sleep();
+}
+
+class Dog implements Animal {
+    public void eat() {
+        System.out.println("Dog is eating");
+    }
+    
+    public void sleep() {
+        System.out.println("Dog is sleeping");
+    }
+}
+
+
+
+Functional Interface (SAM) : 
+@FunctionalInterface
+interface Greeting {
+    void sayHello();
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Greeting greeting = () -> System.out.println("Hello, World!");
+        greeting.sayHello(); // Output: Hello, World!
+    }
+}
+
+
+
+Marker Interface : 
+interface Serializable {
+    // No methods
+}
+
+class Person implements Serializable {
+    private String name;
+    private int age;
+    
+    // Constructor, getters, and setters
+}
+
+
+
+
+
+Interview Questions and Answers
+What is a normal interface in Java?
+
+Answer: A normal interface in Java is an interface that has two or more methods. It defines a set of methods that a class must implement.
+What is a functional interface in Java?
+
+Answer: A functional interface in Java is an interface that has exactly one abstract method. It is also known as a Single Abstract Method (SAM) interface. Functional interfaces are used primarily for lambda expressions and method references.
+What is a marker interface in Java?
+
+Answer: A marker interface in Java is an interface that does not have any methods. It is used to mark a class with a specific property or behavior. Examples of marker interfaces include Serializable and Cloneable.
+Can a functional interface have default or static methods?
+
+Answer: Yes, a functional interface can have default or static methods in addition to its single abstract method. These methods do not affect the functional interface's status as long as there is only one abstract method.
+Provide an example of a functional interface.
+
+Answer:
+@FunctionalInterface
+interface Calculator {
+    int add(int a, int b);
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = (a, b) -> a + b;
+        System.out.println(calc.add(5, 3)); // Output: 8
+    }
+}
+
+
+
+Why are marker interfaces used in Java?
+
+Answer: Marker interfaces are used to provide metadata to classes. They indicate that a class has a specific property or behavior. For example, the Serializable marker interface indicates that a class can be serialized.
+What is the @FunctionalInterface annotation used for?
+
+Answer: The @FunctionalInterface annotation is used to indicate that an interface is intended to be a functional interface. It helps the compiler enforce the rule that the interface has exactly one abstract method.
+Can a normal interface extend a functional interface?
+
+Answer: Yes, a normal interface can extend a functional interface. However, if the normal interface adds more abstract methods, it will no longer be considered a functional interface.
