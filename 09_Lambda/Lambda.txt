@@ -1,0 +1,64 @@
+Explanation of Lambda Expressions in Java
+In layman terms, a lambda expression in Java is a concise way to represent an instance of a functional interface. It allows you to write a method implementation in a more compact and readable form. Lambda expressions are particularly useful for simplifying the code when working with functional interfaces, such as those used in collections and streams.
+
+Key Points
+Functional Interface: A lambda expression can only be used with a functional interface, which is an interface with exactly one abstract method.
+Syntax: The basic syntax of a lambda expression is (parameters) -> expression or (parameters) -> { statements; }.
+Type Inference: The compiler can often infer the types of the parameters, so you don't need to specify them explicitly.
+Simplified Code: Lambda expressions make the code more concise and readable, especially when dealing with simple method implementations.
+
+
+
+
+Interview Questions and Answers
+What is a lambda expression in Java?
+
+Answer: A lambda expression in Java is a concise way to represent an instance of a functional interface. It allows you to write a method implementation in a more compact and readable form.
+What is the syntax of a lambda expression?
+
+Answer: The basic syntax of a lambda expression is (parameters) -> expression or (parameters) -> { statements; }. For example:
+(int i) -> System.out.println("in show " + i);
+
+
+
+What is a functional interface, and why is it important for lambda expressions?
+
+Answer: A functional interface is an interface with exactly one abstract method. Lambda expressions can only be used with functional interfaces because they provide the target type for the lambda expression.
+Can lambda expressions have multiple parameters?
+
+Answer: Yes, lambda expressions can have multiple parameters. For example:
+(int i, int j) -> System.out.println("in show " + i + " and " + j);
+
+
+What is type inference in the context of lambda expressions?
+
+Answer: Type inference means that the compiler can often infer the types of the parameters in a lambda expression, so you don't need to specify them explicitly. For example:
+A obj = i -> System.out.println("in show " + i);
+
+
+Provide an example of a lambda expression with a functional interface.
+
+Answer:
+@FunctionalInterface
+interface Calculator {
+    int add(int a, int b);
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = (a, b) -> a + b;
+        System.out.println(calc.add(5, 3)); // Output: 8
+    }
+}
+
+
+
+What are the benefits of using lambda expressions?
+
+Answer: The benefits of using lambda expressions include:
+More concise and readable code
+Simplified syntax for implementing functional interfaces
+Improved productivity and reduced boilerplate code
+Can lambda expressions capture variables from the enclosing scope?
+
+Answer: Yes, lambda expressions can capture variables from the enclosing scope, similar to anonymous inner classes. These variables must be effectively final, meaning they cannot be modified after being assigned.

@@ -1,0 +1,36 @@
+Explanation of the throw Keyword in Java
+In layman terms, the throw keyword in Java is used to manually trigger an exception. Think of it as a way to signal that something has gone wrong in your code, and you want to handle it in a specific way. When you use the throw keyword, you create an exception object and "throw" it, which means you are telling the program that an error has occurred.
+
+Key Points
+Manually Triggering Exceptions: The throw keyword is used to manually trigger an exception.
+Creating Exception Objects: You create an exception object using the new keyword and then throw it.
+Handling Thrown Exceptions: Thrown exceptions can be caught and handled using try-catch blocks.
+
+
+
+
+
+
+
+Steps to Use the throw Keyword
+Create an Exception Object: Use the new keyword to create an exception object.
+
+Exception e = new Exception("Custom error message");
+
+Throw the Exception: Use the throw keyword to throw the exception.
+throw e;
+
+
+Handle the Exception: Use a try-catch block to catch and handle the thrown exception.
+try {
+    // Code that might throw an exception
+} catch (Exception e) {
+    // Code to handle the exception
+}
+
+
+
+Benefits of Using the throw Keyword
+Custom Error Handling: Allows you to create custom error messages and handle specific conditions in your code.
+Improved Code Readability: Makes it clear where and why an error is being triggered.
+Separation of Concerns: Separates the error detection logic from the error handling logic, making the code easier to maintain.

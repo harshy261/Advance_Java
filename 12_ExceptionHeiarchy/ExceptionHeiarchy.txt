@@ -1,0 +1,54 @@
+Explanation of Exception Hierarchy in Java
+In layman terms, the exception hierarchy in Java is like a family tree that shows how different types of errors and exceptions are related to each other. At the top of this hierarchy is the Throwable class, which is the parent of all error and exception classes. The Throwable class is further divided into two main branches: Error and Exception.
+
+Key Points
+Throwable Class: The root of the exception hierarchy. All errors and exceptions are derived from this class.
+Error Class: Represents serious problems that a reasonable application should not try to catch. These are usually related to the environment in which the application is running (e.g., hardware or system errors).
+Exception Class: Represents conditions that a reasonable application might want to catch. These are usually related to the application's logic or external resources.
+
+
+
+
+Error Class
+Errors are serious issues that are typically beyond the control of the application and usually indicate problems with the environment in which the application is running. Examples include:
+
+ThreadDeath: Indicates that a thread is being terminated.
+VirtualMachineError: Indicates that the Java Virtual Machine is broken or has run out of resources (e.g., OutOfMemoryError).
+IOError: Indicates that an I/O operation has failed.
+
+
+
+
+Exception Class
+Exceptions are conditions that an application might want to catch and handle. Exceptions are further divided into two categories:
+
+Checked Exceptions: These are exceptions that the compiler forces you to handle. You must either catch these exceptions or declare them in the method signature using the throws keyword.
+
+SQLException: Indicates a database access error.
+IOException: Indicates an I/O operation failure.
+Unchecked Exceptions (Runtime Exceptions): These are exceptions that the compiler does not force you to handle. You can choose to catch these exceptions, but it is not mandatory.
+
+ArithmeticException: Indicates an arithmetic error, such as division by zero.
+ArrayIndexOutOfBoundsException: Indicates that an array has been accessed with an illegal index.
+NullPointerException: Indicates that an application is trying to use null where an object is required.
+
+
+Exception Hierarchy Diagram :
+java.lang.Object
+   └── java.lang.Throwable
+       ├── java.lang.Error
+       │   ├── java.lang.ThreadDeath
+       │   ├── java.lang.VirtualMachineError
+       │   │   └── java.lang.OutOfMemoryError
+       │   └── java.io.IOError
+       └── java.lang.Exception
+           ├── java.lang.RuntimeException
+           │   ├── java.lang.ArithmeticException
+           │   ├── java.lang.ArrayIndexOutOfBoundsException
+           │   └── java.lang.NullPointerException
+           ├── java.sql.SQLException
+           └── java.io.IOException
+
+
+
+

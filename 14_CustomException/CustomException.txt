@@ -1,0 +1,164 @@
+Explanation of Custom Exceptions in Java
+In layman terms, a custom exception in Java is like creating your own type of error. Sometimes, the built-in exceptions provided by Java (like NullPointerException or ArrayIndexOutOfBoundsException) are not enough to describe the specific problem that occurred in your program. In such cases, you can create your own exception class to represent these specific errors. This makes your code more readable and helps in better error handling.
+
+Key Points
+Custom Exception Class: You create a custom exception by defining a new class that extends the Exception class (or any of its subclasses).
+Constructor: Your custom exception class should have a constructor that calls the constructor of the superclass (Exception) to set the error message.
+Throwing Custom Exceptions: You can throw your custom exception using the throw keyword.
+Catching Custom Exceptions: You can catch and handle your custom exception using a try-catch block.
+
+
+
+
+
+
+
+
+
+Steps to Create and Use Custom Exceptions
+Define a Custom Exception Class: Create a new class that extends the Exception class.
+class MyCustomException extends Exception {
+    public MyCustomException(String message) {
+        super(message);
+    }
+}
+
+
+
+Throw the Custom Exception: Use the throw keyword to throw an instance of your custom exception.if (someCondition) {
+    throw new MyCustomException("Custom error message");
+}
+
+
+
+Catch the Custom Exception: Use a try-catch block to catch and handle the custom exception.
+try {
+    // Code that might throw the custom exception
+} catch (MyCustomException e) {
+    // Code to handle the custom exception
+}
+
+
+
+Benefits of Custom Exceptions
+Specific Error Handling: Custom exceptions allow you to define specific error conditions that are meaningful to your application.
+Improved Readability: Custom exceptions make your code more readable by providing clear and descriptive error messages.
+Better Debugging: Custom exceptions help in better debugging by providing more context about the error.
+
+
+
+
+
+
+
+
+
+Interview Questions and Answers on Custom Exceptions in Java
+What is a custom exception in Java?
+
+Answer: A custom exception in Java is a user-defined exception class that extends the Exception class (or any of its subclasses). It is used to represent specific error conditions that are meaningful to the application.
+Why would you create a custom exception?
+
+Answer: You would create a custom exception to handle specific error conditions that are not adequately represented by the built-in exceptions. Custom exceptions improve code readability, provide clear and descriptive error messages, and help in better debugging by providing more context about the error.
+How do you create a custom exception in Java?
+
+Answer: To create a custom exception, you define a new class that extends the Exception class and provide a constructor to set the error message. For example:
+class MyCustomException extends Exception {
+    public MyCustomException(String message) {
+        super(message);
+    }
+}
+
+
+
+
+How do you throw a custom exception in Java?
+
+Answer: You throw a custom exception using the throw keyword. For example:
+if (someCondition) {
+    throw new MyCustomException("Custom error message");
+}
+
+
+
+How do you catch a custom exception in Java?
+
+Answer: You catch a custom exception using a try-catch block. For example:
+try {
+    // Code that might throw the custom exception
+} catch (MyCustomException e) {
+    // Code to handle the custom exception
+    System.out.println("Caught a custom exception: " + e.getMessage());
+}
+
+
+
+
+Can a custom exception extend a runtime exception?
+
+Answer: Yes, a custom exception can extend RuntimeException if you want it to be an unchecked exception. For example:
+class MyRuntimeException extends RuntimeException {
+    public MyRuntimeException(String message) {
+        super(message);
+    }
+}
+
+
+
+
+What are the benefits of using custom exceptions?
+
+Answer:
+Specific Error Handling: Custom exceptions allow you to define specific error conditions that are meaningful to your application.
+Improved Readability: Custom exceptions make your code more readable by providing clear and descriptive error messages.
+Better Debugging: Custom exceptions help in better debugging by providing more context about the error.
+Provide an example of a custom exception class and how it is used.
+
+Answer:
+// Custom exception class
+class AgeException extends Exception {
+    public AgeException(String message) {
+        super(message);
+    }
+}
+
+public class CustomExceptionExample {
+    public static void main(String[] args) {
+        try {
+            checkAge(15); // This will throw a custom exception
+        } catch (AgeException e) {
+            System.out.println("Caught a custom exception: " + e.getMessage());
+        }
+        System.out.println("Program continues...");
+    }
+
+    public static void checkAge(int age) throws AgeException {
+        if (age < 18) {
+            throw new AgeException("Age must be 18 or older.");
+        } else {
+            System.out.println("Age is valid.");
+        }
+    }
+}
+
+
+
+
+What is the difference between checked and unchecked custom exceptions?
+
+Answer: Checked custom exceptions extend the Exception class and must be declared in the method signature or handled with a try-catch block. Unchecked custom exceptions extend the RuntimeException class and do not need to be declared or caught.
+Can you create a custom exception with additional fields and methods?
+
+Answer: Yes, you can create a custom exception with additional fields and methods to provide more information about the error. For example:
+class DetailedException extends Exception {
+    private int errorCode;
+
+    public DetailedException(String message, int errorCode) {
+        super(message);
+        this.errorCode = errorCode;
+    }
+
+    public int getErrorCode() {
+        return errorCode;
+    }
+}
