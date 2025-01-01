@@ -1,0 +1,96 @@
+Explanation of Thread States in Java
+In layman terms, a thread in Java goes through several stages or "states" during its lifecycle, much like a person goes through different stages in life (like being born, growing up, working, resting, and eventually passing away). Understanding these states helps you manage and control the behavior of threads in your program.
+
+Key Thread States
+New State:
+
+Description: The thread is created but not yet started.
+Example: You have a new thread object, but you haven't called the start() method on it yet.
+Code:
+Thread t = new Thread();
+
+
+
+Runnable State:
+
+Description: The thread is ready to run and waiting for CPU time.
+Example: You have called the start() method, but the thread is waiting for its turn to execute.
+Code:
+t.start();
+
+
+
+Running State:
+
+Description: The thread is currently executing its run() method.
+Example: The thread has been given CPU time and is performing its task.
+Code:
+public void run() {
+    // Thread's task
+}
+
+
+
+Waiting/Blocked State:
+
+Description: The thread is waiting for some condition or resource to be available.
+Example: The thread is waiting for another thread to complete, or it is waiting for a resource to become available.
+Methods: sleep(), wait(), join()
+Code:
+Thread.sleep(1000); // Thread sleeps for 1 second
+synchronized (obj) {
+    obj.wait(); // Thread waits for a notification
+}
+
+
+
+
+Terminated/Dead State:
+
+Description: The thread has completed its execution or has been terminated.
+Example: The thread has finished running its run() method or has been stopped.
+Code:
+// Thread completes its task and exits run() method
+
+
+
+
+
+Example
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running...");
+        try {
+            Thread.sleep(1000); // Thread goes to waiting state
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Thread is awake and running again...");
+    }
+}
+
+public class ThreadStateExample {
+    public static void main(String[] args) {
+        MyThread t = new MyThread(); // New state
+        t.start(); // Runnable state
+        // Running state when run() method is executing
+        // Waiting state when sleep() method is called
+        // Terminated state when run() method completes
+    }
+}
+
+
+
+
+Explanation of the Example
+New State: The thread t is created but not yet started.
+Runnable State: The start() method is called, making the thread ready to run.
+Running State: The thread is executing its run() method.
+Waiting State: The thread calls sleep(), making it wait for 1 second.
+Terminated State: The thread completes its run() method and terminates.
+Key Points to Remember
+Transition Between States: Threads transition between states based on method calls and resource availability.
+Synchronization: Methods like wait(), notify(), and notifyAll() are used to manage thread communication and synchronization.
+Thread Lifecycle Management: Understanding thread states helps in managing the lifecycle and behavior of threads effectively.
+
+
