@@ -98,3 +98,6 @@ Flexible Error Handling: Allows exceptions to be handled at a higher level in th
 What happens if a method that throws an exception is called without handling the exception?
 
 Answer: If a method that throws an exception is called without handling the exception, the program will not compile. The caller method must either handle the exception using a try-catch block or declare that it throws the exception.
+
+
+

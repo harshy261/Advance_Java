@@ -1,0 +1,171 @@
+Explanation of Runnable vs Thread in Java
+In layman terms, both Runnable and Thread are used to create and run threads in Java, but they do it in slightly different ways. Think of Thread as a worker who can both perform a task and manage its own execution. On the other hand, Runnable is like a blueprint for a task that can be given to a worker (a Thread) to execute. Using Runnable is generally preferred because it provides more flexibility and separates the task from the worker.
+
+Key Points
+Thread Class: Represents a thread of execution. You can create a thread by extending the Thread class and overriding its run method.
+Runnable Interface: Represents a task that can be executed by a thread. You create a task by implementing the Runnable interface and defining its run method. This task can then be executed by a Thread.
+
+
+
+
+
+
+Benefits of Using Runnable
+Separation of Concerns: Separates the task (the Runnable implementation) from the worker (the Thread), making the code more modular and easier to manage.
+Flexibility: Allows the same task to be executed by different threads or thread pools.
+Extensibility: Since Java does not support multiple inheritance, using Runnable allows your class to extend another class while still being able to run as a thread.
+Common Use Cases
+Thread Class: Suitable for simple applications where you need to create and run a thread quickly.
+Runnable Interface: Preferred for more complex applications where you need flexibility, modularity, and the ability to use thread pools.
+Key Concepts
+Thread Lifecycle: A thread goes through several states: New, Runnable, Running, Blocked, and Terminated.
+Synchronization: Ensuring that multiple threads can safely access shared resources without causing data corruption.
+Concurrency: Managing multiple threads to ensure they run smoothly and efficiently without interfering with each other.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Interview Questions and Answers on Thread, Multiple Thread, Runnable, and Thread Priority
+Thread
+What is a thread in Java?
+
+Answer: A thread in Java is the smallest unit of execution within a program. It allows multiple tasks to run concurrently within a single program, making it more efficient and responsive.
+How do you create a thread in Java?
+
+Answer: You can create a thread in Java by either extending the Thread class and overriding its run method or by implementing the Runnable interface and defining its run method.
+What is the lifecycle of a thread in Java?
+
+Answer: The lifecycle of a thread includes the following states: New, Runnable, Running, Blocked, and Terminated.
+What is the difference between the start() and run() methods in the Thread class?
+
+Answer: The start() method creates a new thread and calls the run() method in that new thread. The run() method, when called directly, does not create a new thread and runs in the current thread.
+
+
+
+
+
+
+Multiple Thread
+What is multithreading in Java?
+
+Answer: Multithreading in Java is the ability to run multiple threads concurrently, allowing multiple tasks to be performed simultaneously within a single program.
+How do you start multiple threads in Java?
+
+Answer: You start multiple threads in Java by creating instances of Thread (or Runnable) and calling the start() method on each instance.
+What are the benefits of using multiple threads?
+
+Answer: Benefits of using multiple threads include improved performance, better resource utilization, and more responsive applications.
+Provide an example of creating and starting multiple threads.
+
+Answer:
+class A extends Thread {
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Thread A: " + i);
+        }
+    }
+}
+
+class B extends Thread {
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Thread B: " + i);
+        }
+    }
+}
+
+public class MultipleThreadExample {
+    public static void main(String[] args) {
+        A obj1 = new A();
+        B obj2 = new B();
+        obj1.start();
+        obj2.start();
+    }
+}
+
+
+
+
+
+
+
+Runnable
+What is the Runnable interface in Java?
+
+Answer: The Runnable interface represents a task that can be executed by a thread. It has a single method, run(), which contains the code to be executed by the thread.
+What is the difference between extending the Thread class and implementing the Runnable interface?
+
+Answer: Extending the Thread class means your class cannot extend any other class, while implementing the Runnable interface allows your class to extend another class if needed. Implementing Runnable is generally preferred for better design and flexibility.
+Provide an example of creating a thread using the Runnable interface.
+
+Answer:
+class MyRunnable implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Runnable: " + i);
+        }
+    }
+}
+
+public class RunnableExample {
+    public static void main(String[] args) {
+        MyRunnable myRunnable = new MyRunnable();
+        Thread t1 = new Thread(myRunnable);
+        t1.start();
+    }
+}
+
+
+
+
+
+Thread Priority
+What is thread priority in Java?
+
+Answer: Thread priority in Java is a way to suggest the importance of a thread relative to other threads. It ranges from 1 (lowest priority) to 10 (highest priority), with a default priority of 5.
+How do you set and get the priority of a thread?
+
+Answer: You set the priority of a thread using the setPriority(int priority) method and get the priority using the getPriority() method.
+Provide an example of setting thread priority.
+
+Answer:
+class A extends Thread {
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Thread A: " + i);
+        }
+    }
+}
+
+class B extends Thread {
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Thread B: " + i);
+        }
+    }
+}
+
+public class ThreadPriorityExample {
+    public static void main(String[] args) {
+        A obj1 = new A();
+        B obj2 = new B();
+        obj1.setPriority(Thread.MIN_PRIORITY); // Priority 1
+        obj2.setPriority(Thread.MAX_PRIORITY); // Priority 10
+        obj1.start();
+        obj2.start();
+    }
+}
+
+
+Does setting a higher priority guarantee that a thread will execute before lower priority threads?
+
+Answer: No, setting a higher priority does not guarantee that a thread will execute before lower priority threads. Thread priority is just a suggestion to the thread scheduler, and the actual behavior depends on the underlying operating system's thread scheduling policy.
