@@ -1,16 +1,25 @@
-Explanation of Exception Handling in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
+
 In layman terms, exception handling in Java is like having a safety net for your program. When something goes wrong while your program is running, such as trying to divide by zero or accessing an array element that doesn't exist, Java creates an exception object and "throws" it. If you don't catch and handle this exception, your program will crash. Exception handling allows you to catch these exceptions and take appropriate action to handle them, so your program can continue running smoothly.
 
 
 
-Key Concepts
 Try Block: The try block contains the code that might throw an exception. This is where you put the code that you want to monitor for errors.
+
 Catch Block: The catch block contains the code to handle the exception. You can have multiple catch blocks to handle different types of exceptions.
+
 Finally Block: The finally block contains code that always executes, regardless of whether an exception was thrown or caught. It is typically used for cleanup activities, such as closing files or releasing resources.
+
 Throwing Exceptions: You can manually throw an exception using the throw keyword.
 Checked and Unchecked Exceptions: Checked exceptions must be declared in the method signature or handled with a try-catch block. Unchecked exceptions (runtime exceptions) do not need to be declared or caught.
 
 
+*******************************************************************************************************
 
 
 Types of Errors
@@ -24,3 +33,5 @@ Improved Program Reliability: By catching and handling exceptions, you can preve
 Cleaner Code: Exception handling separates error-handling code from regular code, making the program easier to read and maintain.
 Resource Management: The finally block ensures that resources are properly released, even if an exception occurs.
 
+
+*******************************************************************************************************
