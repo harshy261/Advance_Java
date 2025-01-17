@@ -1,21 +1,28 @@
-Explanation of Ducking Exception in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, "ducking" an exception in Java means passing the responsibility of handling an exception to the method that called the current method. Instead of catching and handling the exception within the method where it occurs, you declare that the method can throw the exception, allowing it to be handled further up the call stack. This is done using the throws keyword in the method signature.
 
-Key Points
 Ducking Exception: Passing the responsibility of handling an exception to the caller method.
+
 Throws Keyword: Used in the method signature to declare that a method can throw specific exceptions.
+
 Call Stack: The sequence of method calls that led to the current point in the program. Ducking an exception allows it to be handled higher up in the call stack.
 
 
-
+*******************************************************************************************************
+*******************************************************************************************************
 
 
 Steps to Duck an Exception
+
 Declare the Exception: Use the throws keyword in the method signature to declare that the method can throw specific exceptions.
 public void show() throws ClassNotFoundException {
     // Code that might throw the exception
 }
-
 
 
 Handle the Exception in the Caller Method: The caller method must handle the exception using a try-catch block.
@@ -24,8 +31,6 @@ try {
 } catch (ClassNotFoundException e) {
     // Handle the exception
 }
-
-
 
 
 Benefits of Ducking Exceptions
@@ -39,28 +44,30 @@ Flexible Error Handling: Allows exceptions to be handled at a higher level in th
 
 
 
+*******************************************************************************************************
+*******************************************************************************************************
 
 
 
 Interview Questions and Answers
-What does it mean to "duck" an exception in Java?
 
+
+1. What does it mean to "duck" an exception in Java?
 Answer: Ducking an exception means passing the responsibility of handling an exception to the caller method. This is done by declaring the exception in the method signature using the throws keyword.
-How do you declare that a method can throw an exception?
 
+
+2. How do you declare that a method can throw an exception?
 Answer: You declare that a method can throw an exception using the throws keyword in the method signature. For example:
 public void show() throws ClassNotFoundException {
     // Code that might throw the exception
 }
 
 
-
-
-What is the purpose of the throws keyword in Java?
-
+3. What is the purpose of the throws keyword in Java?
 Answer: The throws keyword is used in a method signature to declare that the method can throw specific exceptions. It allows the method to pass the responsibility of handling the exception to the caller method.
-Provide an example of ducking an exception.
 
+
+4. Provide an example of ducking an exception.
 Answer:
 class A {
     public void show() throws ClassNotFoundException {
@@ -81,23 +88,16 @@ public class DuckingException {
 }
 
 
-
-
-
-
-
-
-
-
-What are the benefits of ducking exceptions?
-
+5. What are the benefits of ducking exceptions?
 Answer:
 Separation of Concerns: Allows you to separate the error detection logic from the error handling logic.
 Simplified Methods: Keeps methods simpler by not cluttering them with error handling code.
 Flexible Error Handling: Allows exceptions to be handled at a higher level in the call stack, where more context might be available.
-What happens if a method that throws an exception is called without handling the exception?
 
+6. What happens if a method that throws an exception is called without handling the exception?
 Answer: If a method that throws an exception is called without handling the exception, the program will not compile. The caller method must either handle the exception using a try-catch block or declare that it throws the exception.
 
 
 
+
+*******************************************************************************************************
