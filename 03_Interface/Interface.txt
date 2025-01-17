@@ -1,24 +1,30 @@
-Explanation of Interfaces in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, an interface in Java is like a contract that a class can sign. This contract specifies a set of methods that the class agrees to implement. Interfaces are used to define a set of actions that a class must perform, without specifying how these actions should be performed. This allows different classes to implement the same set of actions in their own way.
 
-Key Points
+
 Interface Declaration: Use the interface keyword to declare an interface.
+
 Methods in Interface: Methods in an interface are abstract by default, meaning they do not have a body and must be implemented by the class that signs the contract.
+
 Fields in Interface: Fields in an interface are public, static, and final by default.
 Implementing an Interface: A class uses the implements keyword to sign the contract and provide implementations for the interface methods.
+
 Multiple Inheritance: A class can implement multiple interfaces, allowing for a form of multiple inheritance.
 
 
+*******************************************************************************************************
 
 
-
-
-Interview Questions and Answers
-What is an interface in Java?
-
+1. What is an interface in Java?
 Answer: An interface in Java is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. Interfaces cannot contain instance fields or constructors. They are used to specify a set of methods that a class must implement.
-How do you declare an interface in Java?
 
+
+2.How do you declare an interface in Java?
 Answer: An interface is declared using the interface keyword. For example:
 
 interface MyInterface {
@@ -26,23 +32,27 @@ interface MyInterface {
 }
 
 
-Can an interface contain fields?
-
+3. Can an interface contain fields?
 Answer: Yes, an interface can contain fields, but they are implicitly public, static, and final. This means they are constants and cannot be changed.
-Can a class implement multiple interfaces?
 
+
+4. Can a class implement multiple interfaces?
 Answer: Yes, a class can implement multiple interfaces. This allows a class to inherit the abstract methods from multiple interfaces and provide implementations for them.
-What is the difference between an abstract class and an interface?
 
+
+5. What is the difference between an abstract class and an interface?
 Answer: An abstract class can have both abstract methods (without implementation) and concrete methods (with implementation), while an interface can only have abstract methods (until Java 8, which introduced default and static methods). A class can extend only one abstract class but can implement multiple interfaces.
-Can an interface extend another interface?
 
+
+6. Can an interface extend another interface?
 Answer: Yes, an interface can extend another interface using the extends keyword. This allows the child interface to inherit the methods of the parent interface.
-What happens if a class does not implement all methods of an interface?
 
+
+7. What happens if a class does not implement all methods of an interface?
 Answer: If a class does not implement all methods of an interface, it must be declared as an abstract class. The abstract class can then be subclassed by another class that provides implementations for the remaining methods.
-Provide an example of a class implementing multiple interfaces.
 
+
+8. Provide an example of a class implementing multiple interfaces.
 Answer:
 interface A {
     void show();
@@ -71,10 +81,12 @@ public class Main {
 }
 
 
-
-Can an interface have a constructor?
-
+9. Can an interface have a constructor?
 Answer: No, an interface cannot have a constructor because it cannot be instantiated. Interfaces are meant to be implemented by classes.
-What are default methods in interfaces?
 
+
+10. What are default methods in interfaces?
 Answer: Default methods are methods defined in an interface with the default keyword. They provide a default implementation and can be overridden by implementing classes. Default methods were introduced in Java 8.
+
+
+*******************************************************************************************************
