@@ -1,28 +1,36 @@
-Explanation of Functional Interface in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, a functional interface in Java is an interface that has exactly one abstract method. This single abstract method defines the contract that any implementation of the interface must fulfill. Functional interfaces are primarily used to enable lambda expressions and method references, which provide a more concise and readable way to implement single-method interfaces.
 
-Key Points
 Single Abstract Method (SAM): A functional interface has exactly one abstract method.
+
 Lambda Expressions: Functional interfaces are the target types for lambda expressions.
+
 @FunctionalInterface Annotation: This annotation is used to indicate that an interface is intended to be a functional interface. It is optional but helps the compiler enforce the single abstract method rule.
+
 Default and Static Methods: Functional interfaces can have default and static methods in addition to the single abstract method.
 
 
+*******************************************************************************************************
 
 
-
-
-What is a functional interface in Java?
-
+1. What is a functional interface in Java?
 Answer: A functional interface in Java is an interface that has exactly one abstract method. It is used as the target type for lambda expressions and method references.
-What is the purpose of the @FunctionalInterface annotation?
 
+
+2. What is the purpose of the @FunctionalInterface annotation?
 Answer: The @FunctionalInterface annotation is used to indicate that an interface is intended to be a functional interface. It helps the compiler enforce the rule that the interface has exactly one abstract method.
-Can a functional interface have default or static methods?
 
+
+3. Can a functional interface have default or static methods?
 Answer: Yes, a functional interface can have default or static methods in addition to its single abstract method. These methods do not affect the functional interface's status as long as there is only one abstract method.
-Provide an example of a functional interface.
 
+
+4. Provide an example of a functional interface.
 Answer:
 @FunctionalInterface
 interface Calculator {
@@ -37,13 +45,11 @@ public class Main {
 }
 
 
-
-
-What is a lambda expression in Java?
-
+5. What is a lambda expression in Java?
 Answer: A lambda expression in Java is a concise way to represent an instance of a functional interface. It provides a clear and concise way to implement the single abstract method of a functional interface.
-How do you use a lambda expression with a functional interface?
 
+
+6. How do you use a lambda expression with a functional interface?
 Answer: You can use a lambda expression to provide an implementation for the single abstract method of a functional interface. For example:
 @FunctionalInterface
 interface Greeting {
@@ -58,9 +64,11 @@ public class Main {
 }
 
 
-Can a functional interface extend another interface?
-
+7. Can a functional interface extend another interface?
 Answer: Yes, a functional interface can extend another interface, as long as it does not add more abstract methods. If it extends another functional interface, it inherits the single abstract method.
-What is the difference between a functional interface and a regular interface?
 
+
+8. What is the difference between a functional interface and a regular interface?
 Answer: The main difference is that a functional interface has exactly one abstract method, while a regular interface can have multiple abstract methods. Functional interfaces are used to enable lambda expressions and method references.
+
+*******************************************************************************************************
