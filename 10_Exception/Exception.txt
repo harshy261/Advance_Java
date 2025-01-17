@@ -1,55 +1,65 @@
-Explanation of Exceptions in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, an exception in Java is like a signal that something went wrong while your program was running. When an error occurs, Java creates an exception object and "throws" it. If the exception is not "caught" and handled properly, the program will stop running and may display an error message.
 
-Key Points
+
 Exception Handling: The process of responding to exceptions when they occur. This involves "catching" the exception and taking appropriate action to handle it.
+
 Try-Catch Block: A block of code used to handle exceptions. The try block contains the code that might throw an exception, and the catch block contains the code to handle the exception.
+
 Finally Block: A block of code that always executes, regardless of whether an exception was thrown or caught. It is typically used for cleanup activities.
+
 Throwing Exceptions: You can manually throw an exception using the throw keyword.
 Checked and Unchecked Exceptions: Checked exceptions must be declared in the method signature or handled with a try-catch block. Unchecked exceptions (runtime exceptions) do not need to be declared or caught.
 
 
 
-
-
 Types of Errors
+
 Compile-Time Error: Errors that occur when you compile your code. These are usually syntax errors or missing references.
+
 Runtime Error: Errors that occur while your program is running. These are usually exceptions that need to be handled.
+
 Logical Error: Errors in the logic of your program that produce incorrect results. These are the hardest to detect because the program runs without crashing.
 
 
 
+*******************************************************************************************************
+*******************************************************************************************************
 
 
-
-
-Interview Questions and Answers
-What is an exception in Java?
-
+1. What is an exception in Java?
 Answer: An exception in Java is an event that disrupts the normal flow of the program. It is an object that is thrown at runtime when an error occurs.
-What is exception handling?
 
+
+2. What is exception handling?
 Answer: Exception handling is the process of responding to exceptions when they occur. It involves catching the exception and taking appropriate action to handle it.
-What is a try-catch block?
 
+
+3. What is a try-catch block?
 Answer: A try-catch block is used to handle exceptions. The try block contains the code that might throw an exception, and the catch block contains the code to handle the exception.
-What is the purpose of the finally block?
 
+
+4. What is the purpose of the finally block?
 Answer: The finally block contains code that always executes, regardless of whether an exception was thrown or caught. It is typically used for cleanup activities, such as closing files or releasing resources.
-What is the difference between checked and unchecked exceptions?
 
+
+5. What is the difference between checked and unchecked exceptions?
 Answer: Checked exceptions must be declared in the method signature or handled with a try-catch block. Unchecked exceptions (runtime exceptions) do not need to be declared or caught.
-How do you manually throw an exception in Java?
 
+
+6. How do you manually throw an exception in Java?
 Answer: You can manually throw an exception using the throw keyword. For example:
 if (b == 0) {
     throw new ArithmeticException("Cannot divide by zero");
 }
 
 
-
-Provide an example of handling a checked exception.
-
+7. Provide an example of handling a checked exception.
 Answer:
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -67,11 +77,12 @@ public class CheckedExceptionExample {
 }
 
 
-
-
-What is the throws keyword used for?
-
+8. What is the throws keyword used for?
 Answer: The throws keyword is used in a method signature to declare that the method might throw one or more exceptions. For example:
 public void readFile() throws FileNotFoundException {
     // Method implementation
 }
+
+
+*******************************************************************************************************
+*******************************************************************************************************
