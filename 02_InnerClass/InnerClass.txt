@@ -1,68 +1,77 @@
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
+
 Inner Class
 An inner class is a class defined within another class. It has access to the members (fields and methods) of the outer class, even if they are private. Inner classes are used to logically group classes that are only used in one place, increasing encapsulation and readability.
 
-Anonymous Inner Class
+Anonymous Inner Class --
 An anonymous inner class is a class without a name that is declared and instantiated all at once. It is used when you need to override methods of a class or an interface without creating a separate named class.
 
-Abstract Anonymous Class
+Abstract Anonymous Class --
 An abstract anonymous class is an anonymous inner class that extends an abstract class. It provides implementations for the abstract methods of the abstract class.
 
-Summary
+Summary --
 Inner Class: A class defined within another class, used for logical grouping and encapsulation.
 Anonymous Inner Class: A class without a name, used for quick implementation of methods, often for interfaces or abstract classes.
 Abstract Anonymous Class: An anonymous inner class that extends an abstract class and provides implementations for its abstract methods.
 
 
 
+*******************************************************************************************************
 
 
-
-What is an inner class in Java?
-
+1. What is an inner class in Java?
 Answer: An inner class is a class defined within another class. It has access to the members (fields and methods) of the outer class, even if they are private. Inner classes are used to logically group classes that are only used in one place, increasing encapsulation and readability.
-What are the types of inner classes in Java?
 
+
+2. What are the types of inner classes in Java?
 Answer: The types of inner classes in Java are:
 Member Inner Class
 Static Nested Class
 Local Inner Class
 Anonymous Inner Class
-What is an anonymous inner class?
 
+
+3. What is an anonymous inner class?
 Answer: An anonymous inner class is a class without a name that is declared and instantiated all at once. It is used when you need to override methods of a class or an interface without creating a separate named class.
-When would you use an anonymous inner class?
 
+
+4.When would you use an anonymous inner class?
 Answer: You would use an anonymous inner class when you need to provide a quick implementation of an interface or an abstract class, typically for event handling or callback functions.
-What is an abstract anonymous class?
 
+
+5.What is an abstract anonymous class?
 Answer: An abstract anonymous class is an anonymous inner class that extends an abstract class. It provides implementations for the abstract methods of the abstract class.
 
 
-Can an inner class access the private members of its outer class?
-
+6. Can an inner class access the private members of its outer class?
 Answer: Yes, an inner class can access the private members (fields and methods) of its outer class.
 
-What is the difference between a static nested class and a non-static inner class?
 
+7. What is the difference between a static nested class and a non-static inner class?
 Answer: A static nested class is a static member of the outer class and does not have access to the instance variables and methods of the outer class. A non-static inner class, on the other hand, is associated with an instance of the outer class and can access its instance variables and methods.
-How do you instantiate an inner class in Java?
 
+
+8. How do you instantiate an inner class in Java?
 Answer: To instantiate an inner class, you need an instance of the outer class. For example:
 OuterClass outer = new OuterClass();
 OuterClass.InnerClass inner = outer.new InnerClass();
 
 
-How do you instantiate a static nested class in Java?
-
+9. How do you instantiate a static nested class in Java?
 Answer: A static nested class can be instantiated without an instance of the outer class. For example:
 OuterClass.StaticNestedClass nested = new OuterClass.StaticNestedClass();
 
 
-Can an anonymous inner class implement multiple interfaces?
-
+10. Can an anonymous inner class implement multiple interfaces?
 Answer: No, an anonymous inner class can only implement one interface or extend one class at a time.
-Provide an example of an anonymous inner class implementing an interface.
 
+
+11. Provide an example of an anonymous inner class implementing an interface.
 Answer:
 interface Greeting {
     void sayHello();
@@ -81,10 +90,7 @@ public class Main {
 }
 
 
-
-
-Provide an example of an abstract anonymous class.
-
+12. Provide an example of an abstract anonymous class.
 Answer:
 abstract class Animal {
     abstract void makeSound();
@@ -101,3 +107,7 @@ public class Main {
         dog.makeSound(); // Output: Bark
     }
 }
+
+
+
+*******************************************************************************************************
