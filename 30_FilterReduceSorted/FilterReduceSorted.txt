@@ -1,4 +1,9 @@
-Explanation of Filter, Reduce, and Sorted in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, filter, reduce, and sorted are operations provided by the Stream API in Java that allow you to process collections of data in a functional and declarative way. Imagine you have a list of numbers, and you want to filter out the even numbers, sort them, and then reduce them to a single sum. These operations help you achieve that in a clear and concise manner.
 
 Key Points
@@ -9,6 +14,7 @@ Usage: Used to remove elements that do not satisfy the condition.
 Example: Filtering even numbers from a list.
 
 
+*******************************************************************************************************
 
 Reduce
 Purpose: To combine elements of a stream into a single result.
@@ -22,6 +28,7 @@ Usage: Used to arrange elements in a natural or custom order.
 Example: Sorting a list of numbers in ascending order.
 
 
+*******************************************************************************************************
 
 
 Benefits of Using Filter, Reduce, and Sorted
@@ -37,25 +44,24 @@ Reducing: Combining elements into a single result.
 
 
 
+*******************************************************************************************************
+*******************************************************************************************************
 
 
-
-Interview Questions and Answers
-What is the filter method in the Stream API?
-
+1. What is the filter method in the Stream API?
 Answer: The filter method is an intermediate operation that returns a stream consisting of elements that match a given predicate. It is used to remove elements that do not satisfy the condition.
-What is the reduce method in the Stream API?
 
+
+2. What is the reduce method in the Stream API?
 Answer: The reduce method is a terminal operation that combines the elements of a stream into a single result using a given binary operator. It is used to perform aggregation operations, such as summing or averaging.
-What is the sorted method in the Stream API?
 
+
+3. What is the sorted method in the Stream API?
 Answer: The sorted method is an intermediate operation that returns a stream consisting of the elements of the stream, sorted according to their natural order or a custom comparator.
-Provide an example of using the filter method to select even numbers from a list.
 
+
+4. Provide an example of using the filter method to select even numbers from a list.
 Answer:
-
-
-
 List<Integer> nums = Arrays.asList(4, 5, 7, 3, 2, 6);
 List<Integer> evenNums = nums.stream()
                              .filter(n -> n % 2 == 0)
@@ -63,10 +69,7 @@ List<Integer> evenNums = nums.stream()
 System.out.println("Filtered (Even Numbers): " + evenNums);
 
 
-
-
-Provide an example of using the reduce method to sum up the elements of a list.
-
+5. Provide an example of using the reduce method to sum up the elements of a list.
 Answer:
 List<Integer> nums = Arrays.asList(4, 5, 7, 3, 2, 6);
 int sum = nums.stream()
@@ -74,9 +77,7 @@ int sum = nums.stream()
 System.out.println("Reduced (Sum): " + sum);
 
 
-
-Provide an example of using the sorted method to sort a list of numbers in ascending order.
-
+6. Provide an example of using the sorted method to sort a list of numbers in ascending order.
 Answer:
 List<Integer> nums = Arrays.asList(4, 5, 7, 3, 2, 6);
 List<Integer> sortedNums = nums.stream()
@@ -85,12 +86,11 @@ List<Integer> sortedNums = nums.stream()
 System.out.println("Sorted: " + sortedNums);
 
 
-
-What is the purpose of the map method in the Stream API?
-
+7. What is the purpose of the map method in the Stream API?
 Answer: The map method is an intermediate operation that returns a stream consisting of the results of applying a given function to the elements of the stream. It is used to transform elements into another form.
-How can you chain multiple operations in the Stream API?
 
+
+8. How can you chain multiple operations in the Stream API?
 Answer: You can chain multiple operations in the Stream API by calling them sequentially on the stream. For example:
 int result = nums.stream()
                  .filter(n -> n % 2 == 0)
@@ -99,12 +99,13 @@ int result = nums.stream()
                  .reduce(0, (c, e) -> c + e);
 
 
-
-
-
-What are the benefits of using the Stream API for processing collections?
-
+9. What are the benefits of using the Stream API for processing collections?
 Answer: The benefits of using the Stream API for processing collections include concise code, improved readability, and the ability to easily parallelize operations for better performance on multi-core processors.
-Can you modify the elements of a collection using the Stream API?
 
+
+10. Can you modify the elements of a collection using the Stream API?
 Answer: No, the Stream API is designed for processing and transforming data, not for modifying the underlying collection. Streams are intended to be used in a functional programming style, where data is transformed and new collections are created rather than modifying existing ones.
+
+
+*******************************************************************************************************
+*******************************************************************************************************
