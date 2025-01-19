@@ -1,72 +1,74 @@
-Explanation of ArrayList in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, an ArrayList in Java is like a dynamic array that can grow and shrink in size as needed. Imagine you have a list of items, and you want to be able to add or remove items without worrying about the size of the list. An ArrayList provides this flexibility by automatically resizing itself when you add or remove elements.
 
-Key Points
+
 Dynamic Size: Unlike arrays, ArrayList can change its size dynamically.
+
 Indexed Access: You can access elements by their index, just like in an array.
+
 Type-Safe: You can specify the type of elements the ArrayList will hold, ensuring type safety.
+
 Part of Collections Framework: ArrayList is part of the Java Collections Framework and implements the List interface.
 
 
+*******************************************************************************************************
+*******************************************************************************************************
 
 
+Interview Questions and Answers :-
 
-
-
-
-Interview Questions and Answers
-What is an ArrayList in Java?
-
+1. What is an ArrayList in Java?
 Answer: An ArrayList in Java is a resizable array that can grow and shrink in size dynamically. It is part of the Java Collections Framework and implements the List interface.
-How do you create an ArrayList in Java?
 
+
+2. How do you create an ArrayList in Java?
 Answer: You create an ArrayList using the ArrayList class. For example:
 List<Integer> nums = new ArrayList<>();
 
 
-
-What are the advantages of using an ArrayList over an array?
-
+3. What are the advantages of using an ArrayList over an array?
 Answer: The advantages of using an ArrayList over an array include dynamic resizing, ease of adding and removing elements, and built-in methods for common operations like searching and sorting.
-How do you add elements to an ArrayList?
 
+
+4. How do you add elements to an ArrayList?
 Answer: You add elements to an ArrayList using the add method. For example:
 nums.add(6);
 nums.add(5);
 
 
-
-How do you access elements in an ArrayList?
-
+5. How do you access elements in an ArrayList?
 Answer: You access elements in an ArrayList by their index using the get method. For example:
 int element = nums.get(2);
 
 
-
-How do you find the index of an element in an ArrayList?
-
+6. How do you find the index of an element in an ArrayList?
 Answer: You find the index of an element in an ArrayList using the indexOf method. For example:int index = nums.indexOf(2);
 
 
-How do you iterate over the elements of an ArrayList?
-
+7. How do you iterate over the elements of an ArrayList?
 Answer: You can iterate over the elements of an ArrayList using a for-each loop. For example:
 for (int num : nums) {
     System.out.println(num);
 }
 
 
-
-What is the difference between ArrayList and LinkedList?
-
+8. What is the difference between ArrayList and LinkedList?
 Answer: ArrayList is a resizable array implementation of the List interface, providing fast random access to elements. LinkedList is a doubly-linked list implementation of the List interface, providing fast insertion and deletion of elements.
-How do you remove an element from an ArrayList?
 
+
+9. How do you remove an element from an ArrayList?
 Answer: You remove an element from an ArrayList using the remove method. For example:
 nums.remove(2); // Removes the element at index 2
 
 
-
-Is ArrayList synchronized?
-
+10. Is ArrayList synchronized?
 Answer: No, ArrayList is not synchronized. If you need a synchronized ArrayList, you can use Collections.synchronizedList(new ArrayList<>());.
+
+
+*******************************************************************************************************
+*******************************************************************************************************
