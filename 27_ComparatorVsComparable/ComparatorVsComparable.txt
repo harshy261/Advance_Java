@@ -1,24 +1,43 @@
-Explanation of Comparator and Comparable in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, Comparator and Comparable are two interfaces in Java that help you sort objects. Imagine you have a list of students, and you want to sort them by their age or name. Comparable allows you to define a natural ordering for the objects, like sorting students by age. Comparator allows you to define multiple ways to sort the objects, like sorting students by name or by age.
 
-Key Points
-Comparable
+
+Comparable :-
+
 Purpose: Defines a natural ordering for objects.
+
 Interface: Comparable<T>
+
 Method: compareTo(T o)
+
 Usage: Implemented by the class whose objects need to be sorted.
+
 Single Sorting Sequence: Only one sorting sequence can be defined.
-Comparator
+
+
+Comparator :-
+
 Purpose: Defines multiple ways to sort objects.
+
 Interface: Comparator<T>
+
 Method: compare(T o1, T o2)
+
 Usage: Implemented by a separate class or anonymous class.
+
 Multiple Sorting Sequences: Multiple sorting sequences can be defined.
 
 
 
 
 
+*******************************************************************************************************
+*******************************************************************************************************
 
 
 
@@ -76,3 +95,6 @@ Answer: The compare method in the Comparator interface is used to compare two ob
 When would you use Comparator over Comparable?
 
 Answer: You would use Comparator over Comparable when you need to define multiple ways to compare and sort objects, or when you cannot modify the class whose objects need to be sorted.
+
+*******************************************************************************************************
+*******************************************************************************************************
