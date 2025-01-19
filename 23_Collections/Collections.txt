@@ -1,41 +1,56 @@
-Explanation of Collections in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, collections in Java are like containers that can hold multiple items. Imagine you have a box where you can store different objects like toys, books, or clothes. Similarly, in programming, collections are used to store and manage groups of objects. The Java Collections Framework provides a set of classes and interfaces to make it easier to work with collections of objects.
 
-Key Points
+
 Collection API: A set of classes and interfaces that provide a standard way to handle groups of objects.
+
 Collection Interface: The root interface in the collection hierarchy. It represents a group of objects known as elements.
+
 Collections Class: A utility class that provides static methods for operating on collections, such as sorting and searching.
 
 
-Types of Collections
+*******************************************************************************************************
+
+Types of Collections :-
+
 List: An ordered collection that allows duplicate elements. Examples include ArrayList, LinkedList, and Vector.
+
 Set: A collection that does not allow duplicate elements. Examples include HashSet, LinkedHashSet, and TreeSet.
+
 Queue: A collection used to hold multiple elements prior to processing. Examples include LinkedList and PriorityQueue.
+
 Map: A collection that maps keys to values, with no duplicate keys allowed. Examples include HashMap, LinkedHashMap, and TreeMap.
 
 
 
+*******************************************************************************************************
+*******************************************************************************************************
 
 
+Interview Questions and Answers :-
 
-
-
-
-Interview Questions and Answers
-What is the Java Collections Framework?
-
+1. What is the Java Collections Framework?
 Answer: The Java Collections Framework is a set of classes and interfaces that provide a standard way to handle groups of objects. It includes interfaces like List, Set, Queue, and Map, and classes like ArrayList, HashSet, LinkedList, and HashMap.
-What is the difference between Collection and Collections in Java?
 
+
+2. What is the difference between Collection and Collections in Java?
 Answer: Collection is an interface that represents a group of objects, while Collections is a utility class that provides static methods for operating on collections, such as sorting and searching.
-What are the main interfaces of the Java Collections Framework?
 
+
+3. What are the main interfaces of the Java Collections Framework?
 Answer: The main interfaces of the Java Collections Framework are List, Set, Queue, and Map.
-What is the difference between List and Set in Java?
 
+
+4. What is the difference between List and Set in Java?
 Answer: A List is an ordered collection that allows duplicate elements, while a Set is a collection that does not allow duplicate elements.
-Provide an example of how to sort a list using the Collections Framework.
 
+
+5. Provide an example of how to sort a list using the Collections Framework.
 Answer:
 List<Integer> numbers = new ArrayList<>();
 numbers.add(5);
@@ -46,26 +61,26 @@ Collections.sort(numbers);
 System.out.println("Sorted List: " + numbers);
 
 
-
-
-
-What is a Map in Java, and how is it different from other collections?
-
+6. What is a Map in Java, and how is it different from other collections?
 Answer: A Map is a collection that maps keys to values, with no duplicate keys allowed. It is different from other collections because it stores key-value pairs rather than individual elements.
-What is the difference between ArrayList and LinkedList?
 
+
+7. What is the difference between ArrayList and LinkedList?
 Answer: ArrayList is a resizable array implementation of the List interface, providing fast random access to elements. LinkedList is a doubly-linked list implementation of the List interface, providing fast insertion and deletion of elements.
-How do you synchronize a collection in Java?
 
+
+8. How do you synchronize a collection in Java?
 Answer: You can synchronize a collection using the Collections.synchronizedList(), Collections.synchronizedSet(), or Collections.synchronizedMap() methods. For example:
 List<Integer> synchronizedList = Collections.synchronizedList(new ArrayList<>());
 
 
-
-
-What is the purpose of the Iterator interface in the Collections Framework?
-
+9. What is the purpose of the Iterator interface in the Collections Framework?
 Answer: The Iterator interface provides a way to traverse the elements of a collection sequentially. It allows you to remove elements from the collection during the iteration.
-What is the difference between HashMap and TreeMap?
 
+
+10. What is the difference between HashMap and TreeMap?
 Answer: HashMap is an unordered collection that provides constant-time performance for basic operations like get and put. TreeMap is a sorted map that maintains its elements in ascending order based on the natural ordering of its keys or a custom comparator.
+
+
+*******************************************************************************************************
+*******************************************************************************************************
