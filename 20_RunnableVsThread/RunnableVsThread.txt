@@ -1,28 +1,46 @@
-Explanation of Runnable vs Thread in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, both Runnable and Thread are used to create and run threads in Java, but they do it in slightly different ways. Think of Thread as a worker who can both perform a task and manage its own execution. On the other hand, Runnable is like a blueprint for a task that can be given to a worker (a Thread) to execute. Using Runnable is generally preferred because it provides more flexibility and separates the task from the worker.
 
-Key Points
 Thread Class: Represents a thread of execution. You can create a thread by extending the Thread class and overriding its run method.
+
 Runnable Interface: Represents a task that can be executed by a thread. You create a task by implementing the Runnable interface and defining its run method. This task can then be executed by a Thread.
 
 
 
+*******************************************************************************************************
 
 
+Benefits of Using Runnable :- 
 
-Benefits of Using Runnable
 Separation of Concerns: Separates the task (the Runnable implementation) from the worker (the Thread), making the code more modular and easier to manage.
+
 Flexibility: Allows the same task to be executed by different threads or thread pools.
+
 Extensibility: Since Java does not support multiple inheritance, using Runnable allows your class to extend another class while still being able to run as a thread.
-Common Use Cases
+
+
+Common Use Cases :-
+
 Thread Class: Suitable for simple applications where you need to create and run a thread quickly.
+
 Runnable Interface: Preferred for more complex applications where you need flexibility, modularity, and the ability to use thread pools.
-Key Concepts
+
+
+Key Concepts :-
+
 Thread Lifecycle: A thread goes through several states: New, Runnable, Running, Blocked, and Terminated.
+
 Synchronization: Ensuring that multiple threads can safely access shared resources without causing data corruption.
+
 Concurrency: Managing multiple threads to ensure they run smoothly and efficiently without interfering with each other.
 
 
+*******************************************************************************************************
 
 
 
