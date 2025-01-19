@@ -1,32 +1,45 @@
-Explanation of Race Condition in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, a race condition in Java occurs when two or more threads try to access and modify shared data at the same time, leading to unpredictable and incorrect results. Imagine you have two people trying to update the same bank account balance simultaneously without coordinating with each other. One person might overwrite the changes made by the other, resulting in an incorrect balance. In programming, this situation is called a race condition.
 
-Key Points
 Race Condition: A situation where the outcome of a program depends on the sequence or timing of uncontrollable events such as thread execution order.
+
 Shared Resource: A variable or object that is accessed by multiple threads.
+
 Synchronization: A mechanism to control the access of multiple threads to shared resources to prevent race conditions.
 
 
+*******************************************************************************************************
+*******************************************************************************************************
 
+Benefits of Synchronization :- 
 
-
-Benefits of Synchronization
 Data Integrity: Ensures that shared data is accessed and modified in a controlled manner, preventing data corruption.
+
 Predictable Results: Provides consistent and predictable results by controlling the execution order of threads.
-Interview Questions and Answers
-What is a race condition in Java?
 
+*******************************************************************************************************
+*******************************************************************************************************
+
+
+1. What is a race condition in Java?
 Answer: A race condition in Java occurs when two or more threads try to access and modify shared data simultaneously, leading to unpredictable and incorrect results.
-How can you prevent race conditions in Java?
 
+
+2. How can you prevent race conditions in Java?
 Answer: You can prevent race conditions in Java by using synchronization mechanisms such as the synchronized keyword, locks, or other concurrency utilities to control access to shared resources.
-What is the purpose of the synchronized keyword in Java?
 
+
+3. What is the purpose of the synchronized keyword in Java?
 Answer: The synchronized keyword is used to control access to a method or block of code by allowing only one thread to execute it at a time, preventing race conditions.
-Provide an example of a synchronized method in Java.
 
+
+4. Provide an example of a synchronized method in Java.
 Answer:
-
 class Counter {
     int count;
 
@@ -36,14 +49,11 @@ class Counter {
 }
 
 
-
-
-
-What is the difference between a synchronized method and a synchronized block?
-
+5. What is the difference between a synchronized method and a synchronized block?
 Answer: A synchronized method locks the entire method, allowing only one thread to execute it at a time. A synchronized block locks a specific block of code within a method, providing more fine-grained control over synchronization.
-Provide an example of a synchronized block in Java.
 
+
+6. Provide an example of a synchronized block in Java.
 Answer:
 class Counter {
     int count;
@@ -56,10 +66,13 @@ class Counter {
 }
 
 
-
-What is the join method in Java, and why is it used?
-
+7. What is the join method in Java, and why is it used?
 Answer: The join method is used to wait for a thread to finish its execution before continuing with the next line of code. It ensures that the main thread waits for the completion of other threads before proceeding.
-What are some common synchronization issues other than race conditions?
 
+
+8. What are some common synchronization issues other than race conditions?
 Answer: Common synchronization issues include deadlocks (where two or more threads are waiting for each other to release resources) and livelocks (where threads keep changing their state in response to each other without making progress).
+
+
+*******************************************************************************************************
+*******************************************************************************************************
