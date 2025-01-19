@@ -1,112 +1,126 @@
-Explanation of the Optional Class in Java
+*******************************************************************************************************
+
+                                            Explanation:
+
+*******************************************************************************************************
+
 In layman terms, the Optional class in Java is like a container that may or may not hold a value. Imagine you have a box that might contain a gift or might be empty. The Optional class helps you handle situations where a value might be present or absent, without having to deal with null values directly. This can help you avoid NullPointerException and make your code more readable and robust.
 
-Key Points
+
 Purpose: The Optional class is used to represent a value that may or may not be present.
+
 Avoid Null Checks: It helps avoid explicit null checks and reduces the risk of NullPointerException.
+
 Functional Programming: Encourages a functional programming style by providing methods to handle the presence or absence of values.
 
 
+*******************************************************************************************************
 
 
+Common Methods :-
 
-
-Common Methods
 of(): Creates an Optional with a non-null value.
+
 Example: Optional<String> optional = Optional.of("Hello");
+
 ofNullable(): Creates an Optional that may hold a null value.
+
 Example: Optional<String> optional = Optional.ofNullable(null);
+
 empty(): Creates an empty Optional.
+
 Example: Optional<String> optional = Optional.empty();
+
 isPresent(): Checks if a value is present.
+
 Example: boolean present = optional.isPresent();
+
 ifPresent(): Executes a given action if a value is present.
+
 Example: optional.ifPresent(value -> System.out.println(value));
+
 orElse(): Returns the value if present, otherwise returns a default value.
+
 Example: String value = optional.orElse("Default");
+
 orElseGet(): Returns the value if present, otherwise returns the result of a supplier function.
+
 Example: String value = optional.orElseGet(() -> "Default");
+
 orElseThrow(): Returns the value if present, otherwise throws an exception.
+
 Example: String value = optional.orElseThrow(() -> new RuntimeException("Value not present"));
 
 
 
+*******************************************************************************************************
 
 
 
+Benefits of Using Optional :-
 
-Benefits of Using Optional
 Avoid NullPointerException: Helps avoid NullPointerException by providing a clear way to handle the absence of values.
+
 Readable Code: Makes the code more readable and expressive by clearly indicating when a value might be absent.
+
 Functional Style: Encourages a functional programming style by providing methods to handle values in a functional way.
-Interview Questions and Answers
-What is the Optional class in Java?
 
+
+
+*******************************************************************************************************
+*******************************************************************************************************
+
+
+1. What is the Optional class in Java?
 Answer: The Optional class in Java is a container that may or may not hold a value. It is used to represent a value that might be present or absent, helping to avoid NullPointerException and making the code more readable and robust.
-How do you create an Optional with a non-null value?
 
+
+2. How do you create an Optional with a non-null value?
 Answer: You can create an Optional with a non-null value using the of() method. For example:
-
 Optional<String> optional = Optional.of("Hello");
 
 
-
-How do you create an Optional that may hold a null value?
-
+3. How do you create an Optional that may hold a null value?
 Answer: You can create an Optional that may hold a null value using the ofNullable() method. For example:
 Optional<String> optional = Optional.ofNullable(null);
 
 
-
-
-How do you create an empty Optional?
-
+4. How do you create an empty Optional?
 Answer: You can create an empty Optional using the empty() method. For example:
 Optional<String> optional = Optional.empty();
 
 
-
-
-How do you check if a value is present in an Optional?
-
+5. How do you check if a value is present in an Optional?
 Answer: You can check if a value is present in an Optional using the isPresent() method. For example:
 boolean present = optional.isPresent();
 
 
-
-
-
-How do you execute an action if a value is present in an Optional?
-
+6. How do you execute an action if a value is present in an Optional?
 Answer: You can execute an action if a value is present in an Optional using the ifPresent() method. For example:optional.ifPresent(value -> System.out.println(value));
 
 
-
-How do you provide a default value if the value is not present in an Optional?
-
-Answer: You can provide a default value if the value is not present in an Optional using the orElse() method. For example:
+7. How do you provide a default value if the value is not present in an Optional?
+Answer: You can provide a default value if the value is not present in an Optional using the orElse() method. 
+For example:
 String value = optional.orElse("Default Value");
 
 
-
-
-How do you provide a value from a supplier function if the value is not present in an Optional?
-
-Answer: You can provide a value from a supplier function if the value is not present in an Optional using the orElseGet() method. For example:
+8. How do you provide a value from a supplier function if the value is not present in an Optional?
+Answer: You can provide a value from a supplier function if the value is not present in an Optional using the orElseGet() method. 
+For example:
 String value = optional.orElseGet(() -> "Default from Supplier");
 
 
-
-
-How do you throw an exception if the value is not present in an Optional?
-
-Answer: You can throw an exception if the value is not present in an Optional using the orElseThrow() method. For example:
+9. How do you throw an exception if the value is not present in an Optional?
+Answer: You can throw an exception if the value is not present in an Optional using the orElseThrow() method. 
+For example:
 String value = optional.orElseThrow(() -> new RuntimeException("Value not present"));
 
 
-
-
-
-What are the benefits of using the Optional class?
-
+10. What are the benefits of using the Optional class?
 Answer: The benefits of using the Optional class include avoiding NullPointerException, making the code more readable and expressive, and encouraging a functional programming style.
+
+
+
+*******************************************************************************************************
+*******************************************************************************************************
